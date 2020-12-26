@@ -2,16 +2,16 @@
 FROM frost2k5/projectfizilion:latest
 
 # env setup
-RUN mkdir /Fizilion && chmod 777 /Fizilion
-ENV PATH="/Fizilion/bin:$PATH"
-WORKDIR /Fizilion
+RUN mkdir /demon && chmod 777 /demon
+ENV PATH="/demon/bin:$PATH"
+WORKDIR /demon
 
 # clone repo
-RUN git clone https://github.com/FrosT2k5/ProjectFizilion -b dragon /Fizilion
+RUN git clone https://github.com/FrosT2k5/BlackHeart -b monster /demon
 
 
 # Copies session and config(if it exists)
-COPY ./sample_config.env ./userbot.session* ./config.env* /Fizilion/
+COPY ./sample_config.env ./userbot.session* ./config.env* /demon/
 
 #transfer
 RUN curl -sL https://git.io/file-transfer | sh

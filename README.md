@@ -17,13 +17,13 @@
     I will be rolling on the floor laughing at you.
 /**
 ```
-[![Build](https://img.shields.io/github/workflow/status/ElytrA8/ProjectFizilion/FailedChecker?style=for-the-badge)](https://github.com/ElytrA8/ProjectFizilion/actions "build")
+[![Build](https://img.shields.io/github/workflow/status/FrosT2k5/BlackHeart/FailedChecker?style=for-the-badge)](https://github.com/FrosT2k5/BlackHeart/actions "build")
 
-![Docker](https://img.shields.io/docker/cloud/build/elytra8/projectfizilion?style=for-the-badge)
+![Docker](https://img.shields.io/docker/cloud/build/frost2k5/projectfizilion?style=for-the-badge)
 
-![Docker_Size](https://img.shields.io/docker/image-size/elytra8/projectfizilion?style=for-the-badge)
+![Docker_Size](https://img.shields.io/docker/image-size/frost2k5/projectfizilion?style=for-the-badge)
 
-![Docker_Pulls](https://img.shields.io/docker/pulls/elytra8/projectfizilion?style=for-the-badge)
+![Docker_Pulls](https://img.shields.io/docker/pulls/frost2k5/projectfizilion?style=for-the-badge)
 
 ![Spec](https://img.shields.io/badge/Made%20with-LOVE-black?style=for-the-badge)
 
@@ -33,11 +33,11 @@
 Easy way to get STRING_SESSION. 
 
 ### Run on repl.it
-[![Run repl.it](https://img.shields.io/badge/run-string__session.py-blue?style=flat-square&logo=repl.it)](https://session.uraniumcore.repl.run)
+[![Run repl.it](https://img.shields.io/badge/run-string__session.py-blue?style=flat-square&logo=repl.it)](https://session.frost2k5.repl.run)
 
 ### or Run on your terminal
 ```
-wget https://raw.githubusercontent.com/ElytrA8/ProjectFizilion/dragon/terminal_getstring.sh && bash terminal_getstring.sh
+wget https://raw.githubusercontent.com/FrosT2k5/BlackPearl/monster/terminal_getstring.sh && bash terminal_getstring.sh
 ```
 
 ## How To Host?
@@ -45,13 +45,13 @@ wget https://raw.githubusercontent.com/ElytrA8/ProjectFizilion/dragon/terminal_g
 The easiest way to deploy this great bot! is click on button below.
 Make sure you have an account of heroku and follow all the steps required.
 
-<p align="left"><a href="https://heroku.com/deploy?template=https://github.com/FrosT2k5/ProjectFizilion/tree/dragon"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
+<p align="left"><a href="https://heroku.com/deploy?template=https://github.com/FrosT2k5/BlackHeart/tree/monster"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
 
 For further guide you can head to [Groups and Support](https://github.com/MoveAngel/One4uBot#Groups-and-Support) or read this [guide](https://telegra.ph/How-to-host-a-Telegram-Userbot-07-01-2)
 
 ## Groups and Support
 
-For discussion, bug reporting, and help, you can join [project Fizilion Support Group](https://t.me/ProjectFizilion).
+For discussion, bug reporting, and help, you can join [Black Heart Support Group](https://t.me/BlackHeartUB).
 
 ## Credits
 
@@ -64,10 +64,10 @@ Thanks:
 * [GengKapak](https://github.com/GengKapak) - DCLXVI
 * [Mkaraniya](https://github.com/mkaraniya) & [Dev73](https://github.com/Devp73) - OpenUserBot
 * [MoveAngel](https://github.com/MoveAngel) - One4U
-
-and many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/ElytrA8/ProjectFizilion/graphs/contributors).
+* [ElytrA8](https://github.com/ElytrA8) - Project Fizilion
+* and many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/ElytrA8/ProjectFizilion/graphs/contributors).
 
 ## License
 
 This userbot licensed on [Raphielscape Public License](https://github.com/ElytrA8/ProjectFizilion/blob/dragon/LICENSE) - Version 1.d, February 2020
-Graphics Copyrighted By [ElytrA8](https://t.me/ElytrA8)
+Graphics Copyrighted By [ElytrA8](https://t.me/ElytrA8) & [FrosT2k5](https://t.me/SuperCosmicBeing)
