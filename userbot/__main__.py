@@ -8,6 +8,7 @@
 from importlib import import_module
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
+import os
 from sys import argv
 
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
