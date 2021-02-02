@@ -41,7 +41,8 @@ if btlg:
     api = os.environ.get("API_KEY")
     _hash = os.environ.get("API_HASH")
     cid = os.environ.get("BOTLOG_CHATID")
-    with TelegramClient(StringSession(), api, _hash) as client:
+    string = os.environ.get("STRING_SESSION")
+    with TelegramClient(string, api, _hash) as client:
         msg = "Master, Fizilion is now alive, \nTest it by typing .alive in the chat"
         client.send_message(cid, msg)
     
