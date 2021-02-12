@@ -223,7 +223,6 @@ async def check_botlog_chatid():
             "group. Check if you typed the Chat ID correctly.")
         quit(1)
 
-
 with bot:
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
@@ -234,6 +233,19 @@ with bot:
         )
         quit(1)
 
+async def start():
+    if BOTLOG:
+        try:
+            await bot.send_message(
+                BOTLOG_CHATID, "#UserBot #Fizilion \n\nCongrats Master, Userbot Fizilion started successfully\ntest it by typing .alive in any chat"
+                        )
+        except BaseException:
+            None
+    else:
+        pass
+
+with bot:
+    bot.loop.run_until_complete(start())
 # Global Variables
 COUNT_MSG = 0
 USERS = {}

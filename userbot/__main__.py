@@ -6,15 +6,17 @@
 """ Userbot start point """
 
 from importlib import import_module
-from telethon.sync import TelegramClient
-from telethon.sessions import StringSession
-import os
 from sys import argv
+import asyncio
 
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 from userbot import LOGS, bot
 from userbot.modules import ALL_MODULES
 
+from userbot import (
+    BOTLOG,
+    BOTLOG_CHATID
+)
 
 INVALID_PH = '\nERROR: The Phone No. entered is INVALID' \
              '\n Tip: Use Country Code along with number.' \
@@ -35,17 +37,14 @@ LOGS.info(
     "Congratulations, your userbot is now running !! Test it by typing .alive / .on in any chat."
     "If you need assistance, head to https://t.me/ProjectFizilion")
 
-btlg = os.environ.get("BOTLOG") or "False"
+async def start():
+    if BOTLOG:
+        await bot.send_message(
+            BOTLOG_CHATID, "Congrats, Userbot Fizilion has started successfully..."
+                        )
 
-if btlg:
-    api = os.environ.get("API_KEY")
-    _hash = os.environ.get("API_HASH")
-    cid = os.environ.get("BOTLOG_CHATID")
-    string = os.environ.get("STRING_SESSION")
-    with TelegramClient(string, api, _hash) as client:
-        msg = "Master, Fizilion is now alive, \nTest it by typing .alive in the chat"
-        client.send_message(cid, msg)
-    
+start()
+
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
