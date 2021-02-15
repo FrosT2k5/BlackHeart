@@ -58,3 +58,5 @@ wikipedia
 PyGithub
 python-dateutil
 youtube_search
+wget
+validators

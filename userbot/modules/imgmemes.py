@@ -302,7 +302,7 @@ async def tweet(event):
                 "What should i tweet? Give your username and tweet!`")
             return
     if "." in text:
-        username, text = text.split(".")
+        username, text = text.split(".", 1)
     else:
         await event.edit("`What should i tweet? Give your username and tweet!`"
                          )
