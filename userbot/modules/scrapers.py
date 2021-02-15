@@ -39,7 +39,7 @@ from userbot.utils import chrome, googleimagesdownload, progress
 CARBONLANG = "auto"
 TTS_LANG = "en"
 TRT_LANG = "en"
-TEMP_DOWNLOAD_DIRECTORY = "/Fizilion/.bin/"
+TEMP_DOWNLOAD_DIRECTORY = "/demon/.bin/"
 
 
 @register(outgoing=True, pattern=r"^\.crblang (.*)")
@@ -280,11 +280,11 @@ async def wiki(wiki_q):
 async def ipinfo(event):
     #Thanks to https://ipinfo.io for this api
     ip = event.pattern_match.group(1)
-    os.system("curl ipinfo.io/{0} --silent > /Fizilion/ip.txt".format(ip))
-    rinfo = open("/Fizilion/ip.txt","r")
+    os.system("curl ipinfo.io/{0} --silent > /demon/ip.txt".format(ip))
+    rinfo = open("/demon/ip.txt","r")
     info = json.load(rinfo)
     rinfo.close()
-    os.system("rm /Fizilion/ip.txt")
+    os.system("rm /demon/ip.txt")
     
     if "error" in info:
         await event.edit("Invalid IP address")        

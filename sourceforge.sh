@@ -2,10 +2,10 @@
 
 FILE=${1?Error: what to put}
 TEST=${FILE:0:10}
-if [ $TEST == "/Fizilion/" ]; then
+if [ $TEST == "/demon/" ]; then
     MFILE=$FILE
 else
-    MFILE="/Fizilion/"
+    MFILE="/demon/"
     MFILE+="${FILE}"
 fi
 expect -c "
