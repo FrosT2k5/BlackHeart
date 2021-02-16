@@ -37,14 +37,6 @@ LOGS.info(
     "Congratulations, your userbot is now running !! Test it by typing .alive / .on in any chat."
     "If you need assistance, head to https://t.me/ProjectFizilion")
 
-async def start():
-    if BOTLOG:
-        await bot.send_message(
-            BOTLOG_CHATID, "Congrats, Userbot Fizilion has started successfully..."
-                        )
-
-start()
-
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
