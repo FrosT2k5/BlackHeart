@@ -194,7 +194,7 @@ async def get_user_from_event(event):
 
 async def purge():
     try:
-        os.system("rm *.png *.webp")
+        os.system("rm -rf *.png *.webp")
     except OSError:
         pass
 
