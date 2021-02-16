@@ -309,6 +309,7 @@ async def tweet(event):
     if 'username' not in locals():
         await event.edit(f"`Send a username to tweet\n like .tweet username.Text to tweet...`")
     else:  
+        await event.edit(f"Requesting {username} to tweet")
         text = deEmojify(text)
         img = await tweets(text, username)
         await event.client.send_file(event.chat_id, img, reply_to=reply_to_id)
