@@ -2,6 +2,8 @@ aiohttp
 aria2p
 asyncurban
 async_generator
+aiofiles
+aiohttp
 bs4
 cowpy
 cffi
