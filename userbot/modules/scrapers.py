@@ -102,51 +102,34 @@ async def carbon_api(e):
     await e.delete()  # Deleting msg
 
 
-@register(outgoing=True, pattern=r"^\.img(?: |$)(\d*)? ?(.*)")
+
+@register(outgoing=True, pattern="^.img (.*)")
 async def img_sampler(event):
     """ For .img command, search and return images matching the query. """
-
-    if event.is_reply and not event.pattern_match.group(2):
-        query = await event.get_reply_message()
-        query = str(query.message)
-    else:
-        query = str(event.pattern_match.group(2))
-
-    if not query:
-        return await event.edit("`Reply to a message or pass a query to search!`")
-
     await event.edit("`Processing...`")
-
-    if event.pattern_match.group(1) != "":
-        counter = int(event.pattern_match.group(1))
-        if counter > 10:
-            counter = int(10)
-        if counter <= 0:
-            counter = int(1)
-    else:
-        counter = int(3)
-
+    query = event.pattern_match.group(1)
+    lim = findall(r"lim=\d+", query)
+    try:
+        lim = lim[0]
+        lim = lim.replace("lim=", "")
+        query = query.replace("lim=" + lim[0], "")
+    except IndexError:
+        lim = 7
     response = googleimagesdownload()
 
     # creating list of arguments
     arguments = {
         "keywords": query,
-        "limit": counter,
-        "format": "png",
-        "no_directory": "no_directory",
+        "limit": lim,
+        "format": "jpg",
+        "no_directory": "no_directory"
     }
 
-    # if the query contains some special characters, googleimagesdownload errors out
-    # this is a temporary workaround for it (maybe permanent)
-    try:
-        paths = response.download(arguments)
-    except Exception as e:
-        return await event.edit(f"`Error: {e}`")
-
+    # passing the arguments to the function
+    paths = response.download(arguments)
     lst = paths[0][query]
     await event.client.send_file(
-        await event.client.get_input_entity(event.chat_id), lst
-    )
+        await event.client.get_input_entity(event.chat_id), lst)
     shutil.rmtree(os.path.dirname(os.path.abspath(lst[0])))
     await event.delete()
 
