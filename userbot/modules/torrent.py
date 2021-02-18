@@ -43,7 +43,7 @@ async def torrent(event):
             break
 
     if not listdata:
-        return await e.edit("`Error: No results found`")
+        return await event.edit("`Error: No results found`")
 
     tsfileloc = f"{TEMP_DOWNLOAD_DIRECTORY}/{query}.txt"
     with open(tsfileloc, "w+", encoding="utf8") as out_file:
@@ -61,7 +61,7 @@ async def torrent(event):
         f"`Here the results for the query: {query}`\n\nPasted to: [Nekobin]({url})"
     )
     os.remove(tsfileloc)
-    await e.edit(caption, link_preview=False)
+    await event.edit(caption, link_preview=False)
 
 
 def dogbin(magnets):
