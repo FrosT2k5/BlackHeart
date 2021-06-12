@@ -1,5 +1,5 @@
 # inherit prebuilt image
-FROM frost2k5/projectfizilion:latest
+FROM frost2k5/dragonheart:latest
 
 # env setup
 RUN mkdir /demon && chmod 777 /demon
@@ -9,7 +9,6 @@ WORKDIR /demon
 # clone repo
 RUN git clone https://github.com/FrosT2k5/BlackHeart -b monster /demon
 
-
 # Copies session and config(if it exists)
 COPY ./sample_config.env ./userbot.session* ./config.env* /demon/
 
@@ -18,13 +17,6 @@ RUN curl -sL https://git.io/file-transfer | sh
 
 # install required pypi modules
 RUN pip3 install -r requirements.txt
-
-#Adding a new user
-ENV PATH="/usr/sbin:${PATH}"
-RUN useradd docker
-RUN usermod -aG wheel docker
-
-USER docker
 
 # Finalization
 CMD ["python3","-m","userbot"]
