@@ -1,6 +1,9 @@
 # inherit prebuilt image
 FROM frost2k5/dragonheart:latest
 
+# Deps
+RUN apk add chromium
+
 # env setup
 RUN mkdir /demon && chmod 777 /demon
 ENV PATH="/demon/bin:$PATH"
